@@ -69,32 +69,18 @@ h2 {
     color: #333;
 }
 
-/* Skills List */
-#skills ul {
+/* Job and Skills Lists */
+.job, .skills, .certificates {
+    margin-bottom: 20px;
+}
+
+.job ul, .skills ul, .certificates ul {
     list-style: none;
     padding: 0;
 }
 
-#skills ul li {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px;
+.job ul li, .skills ul li, .certificates ul li {
     margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-/* Projects */
-.project {
-    margin-bottom: 20px;
-}
-
-.project h3 {
-    margin-top: 0;
-    color: #4CAF50;
-}
-
-.project p {
-    margin: 5px 0 0;
 }
 
 /* Footer Styles */
@@ -103,7 +89,27 @@ footer {
     padding: 20px;
     background-color: #333;
     color: #fff;
-    position: fixed;
-    width: 100%;
+    position: relative;
     bottom: 0;
+    width: 100%;
+}
+
+/* Scroll to Top Button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    z-index: 1000;
+}
+
+.scroll-to-top:hover {
+    background-color: #45a049;
 }

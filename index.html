@@ -5,16 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdul Hathi - DevOps Engineer</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="js/script.js" defer></script>
 </head>
 <body>
     <header class="header">
         <div class="container">
-            <img src="profile.jpg" alt="Profile Picture" class="profile-img">
+            <img src="images/profile.png" alt="Profile Picture" class="profile-img">
             <h1>Abdul Hathi</h1>
-            <p>DevOps Engineer</p>
+            <h2>DevOps Engineer</h2>
             <button class="btn" onclick="downloadResume()">Download Resume <i class="fas fa-download"></i></button>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> <a href="mailto:abdulhadhi223@gmail.com">abdulhadhi223@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+971506231820">+971 50 623 1820</a></p>
+            </div>            
         </div>
     </header>
 
@@ -55,6 +60,21 @@
                     </ul>
                 </div>
             </div>
+            <div class="slide">
+                <h2>Projects</h2>
+                <div class="project">
+                    <h3>Automated IoT Infrastructure Deployment</h3>
+                    <p>Developed a fully automated CI/CD pipeline for IoT infrastructure using Jenkins, Ansible, and Terraform, reducing deployment time by 50%. Integrated real-time monitoring with Grafana and Prometheus, improving system uptime and reliability.</p>
+                </div>
+                <div class="project">
+                    <h3>Cloud Migration and Optimization</h3>
+                    <p>Led a project to migrate on-premise airline applications to AWS, utilizing EC2, S3, and ECS services, resulting in a 30% reduction in operational costs. Automated infrastructure provisioning with Terraform, ensuring consistent and scalable cloud environments.</p>
+                </div>
+                <div class="project">
+                    <h3>Security-Enhanced DevOps Pipelines</h3>
+                    <p>Implemented security practices within CI/CD pipelines, incorporating tools like SonarQube and OWASP ZAP to identify and mitigate vulnerabilities early in the development lifecycle. Collaborated with security teams to establish automated compliance checks, enhancing the overall security posture of deployments.</p>
+                </div>
+            </div>
         </div>
         <div class="slider-controls">
             <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
@@ -68,6 +88,5 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>

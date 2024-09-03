@@ -27,6 +27,7 @@ body {
     max-width: 1100px;
     width: 90%;
     margin: auto;
+    padding: 0 20px; /* Uniform padding for consistent alignment */
 }
 
 .profile-img {
@@ -102,13 +103,14 @@ h2 {
 /* Slider Section */
 .slider {
     position: relative;
-    margin: 20px auto;
+    margin: 40px auto;
     background: #fff;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 90%;
     max-width: 1000px;
+    padding: 20px;
 }
 
 .slider-container {
@@ -118,11 +120,11 @@ h2 {
 
 .slide {
     min-width: 100%;
-    padding: 40px 30px;
     opacity: 0;
     transform: translateX(100%);
     display: none;
     transition: opacity 0.5s ease, transform 0.5s ease;
+    padding: 20px;
 }
 
 .slide.active {
@@ -135,20 +137,26 @@ h2 {
     color: #333;
     font-size: 2rem;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    margin: 20px 0;
 }
 
 ul li {
     background: #f4f4f4;
     margin: 10px 0;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 8px;
     color: #333;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.job, .project {
+    margin-bottom: 20px;
 }
 
 .job h3, .project h3 {
@@ -157,6 +165,14 @@ ul li {
     color: #48c6ef;
 }
 
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Slider Controls */
 .slider-controls {
     position: absolute;
     top: 50%;
@@ -164,23 +180,36 @@ ul li {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    padding: 0 10px;
+    padding: 0; /* No padding to align buttons at the edges */
+    box-sizing: border-box;
 }
 
 .prev, .next {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     border: none;
     color: #333;
     padding: 10px;
     cursor: pointer;
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 20px;
     transition: background 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: absolute; /* Position absolute for precise placement */
+    top: 50%; /* Center vertically within slider */
+    transform: translateY(-50%); /* Correct vertical centering */
+}
+
+.prev {
+    left: 0px; /* Adjust to ensure the button is clearly visible on the left edge */
+}
+
+.next {
+    right: 30px; /* Adjust to ensure the button is clearly visible on the right edge */
 }
 
 .prev:hover, .next:hover {
     background-color: #48c6ef;
+    color: #fff;
 }
 
 /* Footer and Contact */
@@ -262,13 +291,15 @@ h2, ul li, .job h3, .project h3 {
 }
 
 .btn-link {
-    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
     padding: 10px 20px;
     border: 2px solid #48c6ef;
     border-radius: 25px;
     color: #48c6ef;
     transition: all 0.3s ease;
     font-weight: bold;
+    text-decoration: none; /* Ensure button link style consistency */
 }
 
 .btn-link:hover {

@@ -13,13 +13,13 @@ body {
     overflow-x: hidden;
 }
 
+/* Header Styling */
 .header {
     background: linear-gradient(135deg, #6f86d6, #48c6ef);
     color: #fff;
     padding: 60px 20px;
     text-align: center;
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    position: relative;
     margin-bottom: 50px;
 }
 
@@ -30,8 +30,8 @@ body {
 }
 
 .profile-img {
-    width: 170px;
-    height: 155px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-bottom: 15px;
     border: 5px solid #fff;
@@ -98,27 +98,8 @@ h2 {
     margin-right: 8px;
     color: #ff6b6b;
 }
-p {
-    font-size: 1.1rem;
-    margin-bottom: 20px;
-}
 
-.btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background: #ff6b6b;
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
-}
-
-.btn:hover {
-    background: #ff4757;
-}
-
+/* Slider Section */
 .slider {
     position: relative;
     margin: 20px auto;
@@ -152,8 +133,8 @@ p {
 
 h2 {
     color: #333;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 ul {
@@ -183,6 +164,7 @@ ul li {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    padding: 0 10px;
 }
 
 .prev, .next {
@@ -201,6 +183,7 @@ ul li {
     background-color: #48c6ef;
 }
 
+/* Footer and Contact */
 .footer {
     background: #333;
     color: #fff;
@@ -219,4 +202,76 @@ ul li {
 .footer a:hover {
     color: #ff4757;
     text-decoration: underline;
+}
+
+.contact {
+    padding: 50px 20px;
+    background: #f7f8fa;
+    text-align: center;
+    margin-top: -30px;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Interactive and Consistent Styling */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+p, ul, .job h3, .project h3 {
+    animation: fadeInUp 1s ease-in-out;
+    margin-bottom: 20px;
+}
+
+p.intro-text, p.interactive-text, p.mission-text, p.cta {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+h2, ul li, .job h3, .project h3 {
+    color: #333;
+}
+
+.btn-link {
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #48c6ef;
+    border-radius: 25px;
+    color: #48c6ef;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.btn-link:hover {
+    background: #48c6ef;
+    color: #fff;
 }

@@ -33,4 +33,7 @@ function changeSlide(direction) {
 // Initialize the first slide as active
 document.addEventListener('DOMContentLoaded', () => {
     showSlide(currentSlide);
+    document.querySelectorAll('section').forEach(section => {
+        section.classList.add('show');
+    });
 });

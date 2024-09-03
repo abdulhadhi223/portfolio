@@ -1,31 +1,31 @@
-// Smooth Scrolling for Navigation Links
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+// JavaScript to download the resume
+function downloadResume() {
+    const link = document.createElement('a');
+    link.href = 'Abdul_Hathi_Resume.pdf'; // Make sure this path is correct and accessible
+    link.download = 'Abdul_Hathi_Resume.pdf';
+    link.click();
+}
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+// JavaScript to handle slider functionality
+let currentSlide = 0;
+
+function showSlide(index) {
+    const slides = document.querySelectorAll('.slide');
+    if (index >= slides.length) currentSlide = 0;
+    if (index < 0) currentSlide = slides.length - 1;
+
+    slides.forEach((slide, i) => {
+        slide.style.opacity = '0';
+        slide.classList.remove('active');
     });
-});
+    slides[currentSlide].style.opacity = '1';
+    slides[currentSlide].classList.add('active');
+}
 
-// Scroll to Top Button (optional)
-const scrollToTopBtn = document.createElement('button');
-scrollToTopBtn.textContent = '↑';
-scrollToTopBtn.className = 'scroll-to-top';
-document.body.appendChild(scrollToTopBtn);
+function changeSlide(direction) {
+    currentSlide += direction;
+    showSlide(currentSlide);
+}
 
-scrollToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollToTopBtn.style.display = 'block';
-    } else {
-        scrollToTopBtn.style.display = 'none';
-    }
-});
+// Initialize the first slide as active
+showSlide(currentSlide);

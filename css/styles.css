@@ -30,20 +30,74 @@ body {
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 155px;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border: 5px solid #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.8rem;
+    margin-bottom: 5px;
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #f4f4f4;
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+    color: #fff;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #ff4757;
+}
+
+.contact-info {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contact-info p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #ff6b6b;
+}
+
+.contact-info i {
+    margin-right: 8px;
+    color: #ff6b6b;
+}
 p {
     font-size: 1.1rem;
     margin-bottom: 20px;
@@ -165,28 +219,4 @@ ul li {
 .footer a:hover {
     color: #ff4757;
     text-decoration: underline;
-}
-.contact-info {
-    margin-top: 15px;
-    font-size: 1rem;
-    color: #fff;
-}
-
-.contact-info p {
-    margin: 5px 0;
-}
-
-.contact-info a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.contact-info a:hover {
-    color: #ff6b6b;
-}
-
-.contact-info i {
-    margin-right: 8px;
-    color: #ff6b6b;
 }
